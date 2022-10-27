@@ -1,0 +1,46 @@
+<!-- Navbar -->
+<app-admin-navbar></app-admin-navbar>
+
+<!--  -->
+  
+    <div class="jumbotron mt-4 p-5 text-white base rounded">
+        <div class="container my-5">
+          <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <h3>Queries</h3>
+              <div class="d-flex">
+                <button class="btn btn-primary" (click)="addAnswer()">
+                    Answer Query
+                  </button>
+                  <button class="btn btn-danger mx-3" (click)="back()">
+                    Back
+                  </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      
+        <div class="container my-5">
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Question</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Answer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr scope="row" *ngFor="let v of questions">
+                <td>{{ v.qid}}</td>
+                <td>{{ v.question }}</td>
+                <td>{{ v.customername }}</td>
+                <td>{{ v.answer }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+<app-footer></app-footer>

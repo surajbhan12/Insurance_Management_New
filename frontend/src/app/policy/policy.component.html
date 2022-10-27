@@ -1,0 +1,63 @@
+<app-admin-navbar></app-admin-navbar>
+
+<!-- main -->
+    <div class="jumbotron mt-4 p-5 text-white base rounded">
+        <div class="container my-5">
+          <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <h3>Policy Information</h3>
+              <div class="d-flex">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  (click)="clickAdd()"
+                >
+                  Add Policy
+                </button>
+                <button class="btn btn-danger mx-3" (click)="back()">
+                  Back
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      
+        <div class="container my-5">
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Policy Name</th>
+                <th>Category</th>
+                <th>Premium</th>
+                <th>Maturity</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let v of policies">
+                <td>{{ v.policyno }}</td>
+                <td>{{ v.policyname }}</td>
+                <td>{{ v.category }}</td>
+                <td>{{ v.premium }}</td>
+                <td>{{ v.maturity }}</td>
+                <td>
+                  <button class="btn-danger mx-3" (click)="deletePolicy(v.policyno)">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
+<!-- main content  close-->
+
+
+
+
+<app-footer></app-footer>

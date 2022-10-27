@@ -1,0 +1,53 @@
+
+<main class="main" id="top">
+ 
+  <app-navbar></app-navbar>
+  <!-- Login -->
+
+  <section class="py-0">
+      <div class="bg-holder" style="background-image:url(assets/img/illustrations/bg.png);background-position:left center;background-size:auto 816px;">
+      </div>
+      <!--/.bg-holder-->
+  
+      <div class="container" *ngIf="!showUser">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-md-6 col-xl-7 pt-5 text-md-start text-center">
+            <h1 class="display-2 text-light fw-thin">We provide the best <br class="d-none d-xl-block" />value <strong class="fw-bolder">insurance </strong></h1>
+            <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
+          </div>
+          <div class="col-md-5 col-xl-4 pe-xxl-0">
+            <div class="card card-bg shadow hero-header-form">
+              <div class="card-body p-4 p-xl-6">
+                <h2 class="text-100 text-center"> User Login</h2>
+                <form class="mb-3" action="">
+                  <div class="form-floating mb-3">
+                    <input class="form-control input-box form-ensurance-header-control" id="floatingName" type="text" placeholder="name"name="name" [(ngModel)]="user.username" required/>
+                    <label for="floatingName">User Name</label>
+                  </div>
+                  
+                  <div class="form-floating mb-3">
+                    <input class="form-control input-box form-ensurance-header-control" id="floatingPswd" type="password" placeholder="Password" name="pwd" [(ngModel)]="user.password" required/>
+                    <label for="floatingPswd">Password</label>
+                  </div>
+                  
+                  
+                  <div class="col-6 center d-grid">
+                    <button class="btn btn-primary rounded-pill"type="submit" (click)="loginNow()">Login</button>
+                  </div>
+                  <br><br><h6 align="center">{{message}}</h6>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+ 
+</main>
+<div class="contain"  *ngIf="showUser">
+  <app-user-dasboard></app-user-dasboard>
+  </div>
+  <app-footer></app-footer>
+<router-outlet></router-outlet>

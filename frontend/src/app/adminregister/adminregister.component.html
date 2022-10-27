@@ -1,0 +1,67 @@
+
+<main class="main" id="top">
+<app-admin-navbar></app-admin-navbar>
+
+  
+  <section class="py-0">
+      <div class="bg-holder" style="background-image:url(assets/img/illustrations/bg.png);background-position:left center;background-size:auto 816px;">
+      </div>
+      <!--/.bg-holder-->
+  
+      <div class="container">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-md-7 col-xl-7 pt-5 text-md-start text-center">
+            <h1 class="display-2 text-light fw-thin">We provide the best <br class="d-none d-xl-block" />value <strong class="fw-bolder">insurance </strong></h1>
+            <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
+          </div>
+          <div class="col-md-5 col-xl-4 pe-xxl-0">
+            <div class="card card-bg shadow hero-header-form">
+              <div class="card-body p-4 p-xl-5">
+                <h2 class="text-100 text-center">Admin Registration</h2>
+                <form class="mb-3">
+                  <div class="form-floating mb-3">
+                    <input class="form-control input-box form-ensurance-header-control" id="floatingName" type="text" placeholder="name" name="username" [(ngModel)]="user.username"/>
+                    <label for="floatingName">Your name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input class="form-control input-box form-ensurance-header-control" id="floatingEmail" type="email" placeholder="name@example.com" name="email" [(ngModel)]="user.email" />
+                    <label for="floatingEmail">Email</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input class="form-control input-box form-ensurance-header-control" id="floatingPswd" type="password" name="password" [(ngModel)]="user.password"  placeholder="Password" />
+                    <label for="floatingPswd">Password</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input class="form-control input-box form-ensurance-header-control" id="floatingAge" type="tel" placeholder="name@example.com" name="age" [(ngModel)]="user.age"/>
+                    <label for="floatingAge">Age</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input class="form-control input-box form-ensurance-header-control" id="floatingPhone" type="tel" placeholder="name@example.com" name="phone"
+                    [(ngModel)]="user.phone"/>
+                    <label for="floatingPhone">Phone</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                      <!-- <input class="form-control input-box form-ensurance-header-control" id="floatinRole" type="tel" placeholder="name@example.com" /> -->
+                      <label for="floatingRole">Role</label><br>
+                      <select class=" form-control input-box form-ensurance-header-control custom-select custom-select-sm" name="role" [(ngModel)]="user.role" id="floatinRole">
+                          <option selected>Select</option>
+                          <option value="admin">admin</option>
+                          <option value="user">user</option>
+                         </select>
+                  </div>
+                  
+                  <div class="col-12 d-grid">
+                    <button class="btn btn-primary rounded-pill" (click)="userRegister()">Get Registered</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <app-footer></app-footer>
+  
+    </main>
+  

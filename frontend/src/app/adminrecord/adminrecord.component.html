@@ -1,0 +1,67 @@
+<app-admin-navbar></app-admin-navbar>
+    
+<!-- main content -->
+<div class="jumbotron mt-4 p-5 text-white base rounded">
+        <div class="container my-5">
+          <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <h3>Policy Records</h3>
+              <div class="d-flex">
+                <button class="btn btn-primary" (click)="back()">
+                  Back
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      
+        <div class="container my-5">
+          <table class="table table-hover table-dark">
+            <thead>>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Policy Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Applied Date</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr scope="row" *ngFor="let v of records">
+                <td>{{ v.recordno }}</td>
+                <td>{{ v.policyname }}</td>
+                <td>{{ v.category }}</td>
+                <td>{{ v.customername }}</td>
+                <td>{{ v.date}}</td>
+                <td>{{ v.status}}</td>
+                <td>
+                  <button class=" btn-primary" (click)="approve(v.recordno)">
+                    Approve
+                  </button>
+                  <button class="btn-danger mx-3" (click)="disapprove(v.recordno)">
+                    Disapprove
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
+
+<!-- Main -->
+
+
+
+
+<!--  -->
+
+
+
+
+<app-footer></app-footer>
